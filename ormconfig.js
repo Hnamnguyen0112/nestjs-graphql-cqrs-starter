@@ -1,4 +1,4 @@
-const sourcePath = process.cwd();
+const sourcePath = process.cwd()
 module.exports = {
   type: 'postgres',
   host: process.env.DB_HOST || 'localhost',
@@ -17,4 +17,4 @@ module.exports = {
   },
   logging: ['query', 'error'],
   logger: 'file',
-};
+}
