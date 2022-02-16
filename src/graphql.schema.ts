@@ -1,3 +1,4 @@
+
 /*
  * -------------------------------------------------------
  * THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
@@ -5,32 +6,37 @@
  */
 
 /* tslint:disable */
-
 /* eslint-disable */
 export interface CreateUserInput {
-  exampleField?: Nullable<number>;
+    full_name: string;
+    email: string;
+    password: string;
+    password_confirm: string;
 }
 
 export interface UpdateUserInput {
-  id: number;
+    id: number;
+    full_name?: Nullable<string>;
+    email?: Nullable<string>;
+    password?: Nullable<string>;
 }
 
 export interface User {
-  exampleField?: Nullable<number>;
+    id?: Nullable<number>;
+    full_name?: Nullable<string>;
+    email?: Nullable<string>;
+    is_active?: Nullable<boolean>;
 }
 
 export interface IQuery {
-  users(): Nullable<User>[] | Promise<Nullable<User>[]>;
-
-  user(id: number): Nullable<User> | Promise<Nullable<User>>;
+    users(): Nullable<User>[] | Promise<Nullable<User>[]>;
+    user(id: number): Nullable<User> | Promise<Nullable<User>>;
 }
 
 export interface IMutation {
-  createUser(createUserInput: CreateUserInput): User | Promise<User>;
-
-  updateUser(updateUserInput: UpdateUserInput): User | Promise<User>;
-
-  removeUser(id: number): Nullable<User> | Promise<Nullable<User>>;
+    createUser(createUserInput: CreateUserInput): User | Promise<User>;
+    updateUser(updateUserInput: UpdateUserInput): User | Promise<User>;
+    removeUser(id: number): Nullable<User> | Promise<Nullable<User>>;
 }
 
 type Nullable<T> = T | null;
