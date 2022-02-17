@@ -18,5 +18,4 @@ export class CreateUserInput {
   @IsNotEmpty()
   @Match('password')
   confirm_password: string
-
 }

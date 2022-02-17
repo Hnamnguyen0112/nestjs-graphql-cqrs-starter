@@ -12,8 +12,7 @@ export class GetAllUsersHandler implements IQueryHandler<GetAllUsersQuery> {
   ) {
   }
 
-  execute(query: GetAllUsersQuery): Promise<any> {
-    return Promise.resolve(undefined)
+  async execute(query: GetAllUsersQuery): Promise<User[]> {
+    return this.userRepo.find()
   }
-
 }
