@@ -12,7 +12,7 @@ module.exports = {
   migrationsTableName: 'migrations',
   cli: {
     migrationsDir: `${sourcePath}/src/migrations`,
-    entitiesDir: `${sourcePath}/src/**/entities`,
+    entitiesDir: `${sourcePath}/src/entities`,
     subscribersDir: `${sourcePath}/src/subscribers`,
   },
   logging: ['query', 'error'],
